@@ -1,0 +1,36 @@
+.collection-card .stripe.dark {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.collection-card .stripe {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.collection-card .stripe.dark a p {
+  color: #eee;
+}
+.collection-card .stripe a p {
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.25rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}

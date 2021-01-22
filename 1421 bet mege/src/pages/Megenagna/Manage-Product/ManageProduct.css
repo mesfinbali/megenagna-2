@@ -1,0 +1,4 @@
+#caltoaction .view {
+    max-height: 180vh !important;
+    height: unset !important;
+  }
