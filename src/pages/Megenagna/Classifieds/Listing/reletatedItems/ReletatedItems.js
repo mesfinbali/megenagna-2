@@ -50,29 +50,32 @@
           // typeId: "1"
           // typeName: "Mobile"
           let Electronics=JSON.parse(localStorage.getItem("Electronics"));
+          if(Electronics){
           setElectronics(Electronics.electronics);
+
+          }
       
 
-    // const fetchData = async () => {
-    //   const db = firebase.firestore();
+    const fetchData = async () => {
+      const db = firebase.firestore();
       
-    //   const data = await db.collection("Products").doc('Electronics');
-    //   data.get().then(function(doc) {
-    //     if (doc.exists) {
-    //         console.log(" Document data:", doc.data()); 
-    //         if (doc.data().products) {
-    //         setElectronics(doc.data().products);
-    //         }
-    //     } else {
-    //         console.log("No such  document StudentList!");
-    //     }
-    // }).catch(function(error) {
-    //     console.log("Error getting document:", error);
-    // });
+      const data = await db.collection("Products").doc('Electronics');
+      data.get().then(function(doc) {
+        if (doc.exists) {
+            console.log(" Document data:", doc.data()); 
+            if (doc.data().products) {
+            setElectronics(doc.data().products);
+            }
+        } else {
+            console.log("No such  document StudentList!");
+        }
+    }).catch(function(error) {
+        console.log("Error getting document:", error);
+    });
     
-    // // setSpells(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
-    // };
-    // fetchData();
+    // setSpells(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+    };
+    fetchData();
   }, []);
     
   
